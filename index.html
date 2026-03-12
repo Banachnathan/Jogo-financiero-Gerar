@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vida Financeira</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="particles"></div>
+
+<!-- ══ START ══ -->
+<div class="screen active" id="s-start">
+  <div class="logo-coin">₿</div>
+  <h1 class="game-title">Vida<br>Financeira</h1>
+  <p class="game-sub">Educação financeira em jogo</p>
+  <div class="start-stats">
+    <div class="sstat"><div class="sstat-num">10</div><div class="sstat-label">Desafios</div></div>
+    <div class="sstat"><div class="sstat-num">3</div><div class="sstat-label">Fases</div></div>
+    <div class="sstat"><div class="sstat-num">100</div><div class="sstat-label">Moedas</div></div>
+  </div>
+  <button class="btn-start" onclick="startGame()">Começar Jogo</button>
+</div>
+
+<!-- ══ GAME ══ -->
+<div class="screen" id="s-game">
+  <div class="game-header">
+    <span class="phase-pill" id="q-phase">Fase 1</span>
+    <div class="coin-display"><div class="coin-dot">M</div><span id="coin-count">0</span></div>
+  </div>
+  <div class="progress-track"><div class="progress-fill" id="progress" style="width:0%"></div></div>
+  <div class="streak-bar" id="streak-bar"></div>
+  <p class="q-counter" id="q-num">Pergunta 1 de 10</p>
+  <div class="question-card"><p class="q-text" id="q-text"></p></div>
+  <div class="options" id="q-options"></div>
+  <div class="feedback-box" id="feedback"></div>
+  <button class="btn-next" id="next-btn" onclick="nextQuestion()">Próxima →</button>
+</div>
+
+<!-- ══ END ══ -->
+<div class="screen" id="s-end">
+  <div class="trophy" id="end-icon">🏆</div>
+  <h1 class="end-title" id="end-title">Parabéns!</h1>
+  <p class="end-msg" id="end-msg"></p>
+  <div class="end-stats">
+    <div class="end-stat">
+      <div class="end-stat-num green" id="final-score">0/10</div>
+      <div class="end-stat-label">Acertos</div>
+    </div>
+    <div class="end-stat">
+      <div class="end-stat-num gold" id="final-coins">0</div>
+      <div class="end-stat-label">Moedas</div>
+    </div>
+  </div>
+  <div id="result-badge" style="margin-bottom:2rem"></div>
+  <div class="end-btns">
+    <button class="btn-replay" onclick="startGame()">Jogar Novamente</button>
+    <button class="btn-ghost" onclick="showScreen('s-start')">← Tela Inicial</button>
+  </div>
+</div>
+
+<script src="main.js">
+
+</script>
+</body>
+</html>
